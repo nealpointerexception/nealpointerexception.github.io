@@ -87,3 +87,14 @@ html, body {
     left: 0;
     z-index: 0;
 }
+
+.l-active{
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+.l-inactive{
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+}

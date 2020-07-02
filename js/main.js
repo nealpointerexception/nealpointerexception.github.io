@@ -13,7 +13,7 @@ window.onload
         connectParticles:
             true,
         color:
-            '#fafafa'
+            '#868686'
         ,
 // options for breakpoints
         responsive: [
@@ -26,7 +26,7 @@ window.onload
                         100
                     ,
                     color:
-                        '#fafafa'
+                        '#999999'
                     ,
                     connectParticles:
                         true
