@@ -18,7 +18,7 @@ window.onload
                         ,
                         options: {
                             maxParticles:
-                                100
+                                50
                             ,
                             color:
                                 '#999999'
@@ -32,7 +32,7 @@ window.onload
                         ,
                         options: {
                             maxParticles:
-                                100
+                                25
                             ,
                             connectParticles:
                                 true
@@ -43,7 +43,7 @@ window.onload
                         ,
                         options: {
                             maxParticles:
-                                0
+                                10
 
                             // disables particles.js
                         }
