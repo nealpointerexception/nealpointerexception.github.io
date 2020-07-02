@@ -12,7 +12,9 @@ window.onload
         ,
         connectParticles:
             true,
-
+        color:
+            '#fafafa'
+        ,
 // options for breakpoints
         responsive: [
             {
@@ -21,10 +23,10 @@ window.onload
                 ,
                 options: {
                     maxParticles:
-                        200
+                        100
                     ,
                     color:
-                        '#48F2E3'
+                        '#fafafa'
                     ,
                     connectParticles:
                         true
