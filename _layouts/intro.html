@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/extra.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="/js/granim.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Neal Chokshi</title>
+
+</head>
+<body>
+<canvas class=
+                "background"
+></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+<script src="../js/main.js"></script>
+<div class="center-screen">
+    <div class="parent">
+        <canvas id="canvas-basic"></canvas>
+        <div class="child uk-animation-scale-up">
+            <img src="../imgs/neal.png" id="profile-pic"/>
+        </div>
+
+    </div>
+    <h1 class="uk-heading-small">Neal Chokshi</h1>
+</div>
+
+<!-- Create a Granim instance -->
+<script>
+    var granimInstance = new Granim({
+        element: '#canvas-basic',
+        name: 'granim',
+        opacity: [1, 1],
+        states : {
+            "default-state": {
+                gradients: [
+                    ['#b800ff', '#ff0900'],
+                    ['#e500ff','#2e24d4'],
+                ]
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

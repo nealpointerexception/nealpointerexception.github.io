@@ -43,47 +43,5 @@
 <!--<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-usage">Open</button>-->
 
 <!-- This is a button toggling the off-canvas -->
-<div class="bar-wrap">
 
-    <div class="parent">
-        <canvas id="canvas-basic"></canvas>
-        <div class="child">
-            <img src="../imgs/neal.png" id="profile-pic"/>
-        </div>
-    </div>
-
-
-    <!-- Create a Granim instance -->
-    <script>
-        var granimInstance = new Granim({
-            element: '#canvas-basic',
-            name: 'granim',
-            opacity: [1, 1],
-            states : {
-                "default-state": {
-                    gradients: [
-                        ['#b800ff', '#ff0900'],
-                        ['#e500ff','#2e24d4'],
-                    ]
-                }
-            }
-        });
-    </script>
-
-    <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
-        <li>
-            <h1 class="list-item">Neal Chokshi</h1>
-        </li>
-        <li class="uk-active list-item menu-text">
-            <a href="#">Home</a>
-        </li>
-        <li class="list-item menu-text">
-            <a href="#">Projects</a>
-        </li>
-        <li class="list-item menu-text">
-            <a href="#">Blog</a>
-        </li>
-
-    </ul>
-</div>
 
