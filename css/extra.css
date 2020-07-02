@@ -1,0 +1,68 @@
+#left-col {
+    position: fixed;
+    left: 0;
+    top:0;
+    bottom:0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #282828;
+    width: 360px;
+    z-index:1;
+    /*border-top-right-radius: 50px;*/
+    /*border-bottom-right-radius: 50px;*/
+
+}
+.bar-wrap {
+    overflow-x: auto;
+    padding: 2rem;
+}
+#right-col {
+    margin-left: 260px;
+}
+#canvas-basic {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    border-radius: 100%;
+}
+#profile-pic {
+    width: 230px;
+    height: 230px;
+    display: flex;
+    margin: auto;
+    border-radius: 100%;
+
+
+}
+.child {
+    position: absolute;
+    top:4%;
+}
+
+.parent {
+    position: relative;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+
+    justify-content: center;
+    align-items: center;
+}
+.list-item{
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+
+    justify-content: center;
+    align-items: center;
+
+}
+.menu-text{
+    font-size:18px;
+}
