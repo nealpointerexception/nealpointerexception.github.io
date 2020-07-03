@@ -1,28 +1,11 @@
-#left-col {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-color: #282828;
-    width: 360px;
-    z-index: 1;
-    /*border-top-right-radius: 50px;*/
-    /*border-bottom-right-radius: 50px;*/
-
-}
 
 .bar-wrap {
     overflow-x: auto;
     padding: 2rem;
 }
 
-#right-col {
-    margin-left: 260px;
-}
-
 #canvas-basic {
+    max-width: 100%;
     position: relative;
     width: 250px;
     height: 250px;
@@ -34,13 +17,19 @@
 }
 
 #profile-pic {
+    max-width: 100%;
     width: 230px;
-    height: 230px;
-    display: flex;
-    margin: auto;
+    height: auto;
+    display: inline-flex;
+    margin: 0 auto;
     border-radius: 100%;
+    z-index: 10;
 
 
+}
+#nav-bar{
+    background-color: #242424;
+    height: 150% !important;
 }
 
 .child {
@@ -82,7 +71,6 @@ html, body {
 
 .background {
     position: absolute;
-    display: block;
     top: 0;
     left: 0;
     z-index: 0;
@@ -91,10 +79,11 @@ html, body {
 .l-active{
     font-weight: bold;
     font-size: 18px;
-    color: white;
+    color: deeppink;
 }
 .l-inactive{
     font-weight: bold;
     font-size: 18px;
     color: #ffffff;
 }
+

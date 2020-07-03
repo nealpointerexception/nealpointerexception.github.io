@@ -20,9 +20,7 @@ window.onload
                             maxParticles:
                                 50
                             ,
-                            color:
-                                '#999999'
-                            ,
+                            color:['#868686', '#ffffff', '#cc1ba9', '#5f00e3'],
                             connectParticles:
                                 true
                         }
@@ -31,6 +29,7 @@ window.onload
                             425
                         ,
                         options: {
+                            color:['#868686', '#ffffff', '#cc1ba9', '#5f00e3'],
                             maxParticles:
                                 25
                             ,
@@ -42,6 +41,7 @@ window.onload
                             320
                         ,
                         options: {
+                            color:['#868686', '#ffffff', '#cc1ba9', '#5f00e3'],
                             maxParticles:
                                 10
 
@@ -50,6 +50,7 @@ window.onload
                     }
                 ]
             });
+
     };
     $(document).ready(function(){
         $('.js-tilt').tilt({
@@ -58,3 +59,4 @@ window.onload
             scale: 1.03,
         })
       });
+

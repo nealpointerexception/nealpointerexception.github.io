@@ -2,6 +2,8 @@
 <!-- UIkit CSS -->
 
 
+
+
 <link rel="stylesheet" href="/css/extra.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css" />
 
@@ -10,7 +12,7 @@
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit-icons.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="/js/granim.min.js"></script>
-
+<script src="../js/tilt.jquery.js"></script>
 
 <!--  <div class="wrapper">-->
 <!--    {%- assign default_paths = site.pages | map: "path" -%}-->
@@ -43,5 +45,68 @@
 <!--<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-usage">Open</button>-->
 
 <!-- This is a button toggling the off-canvas -->
+<section class="parent uk-animation-slide-top-medium" style="background-color: #1c1c1c; height: 400px">
+<canvas class="background" id="nav"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script src="../js/main.js"></script>
+<div class="center-screen">
+    <div class="parent">
+            <div class="parent js-tilt" style="zoom:0.8;">
+                <canvas id="canvas-basic" ></canvas>
+                <div class="child">
+                    <a href="/index.html">
+                    <img  src="../imgs/neal.png" id="profile-pic" />
+                    </a>
+                </div>
+            </div>
+<!--            <div>-->
+<!--                <h1 class="uk-heading-small" id="page-title" style="color: white; margin-bottom: -10px;">Neal Chokshi</h1>-->
+<!--            </div>-->
+        </div>
 
 
+
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li><a class="l-inactive" id="l1" href="/blog">Blog</a></li>
+                <li><a class="l-inactive" id="l2" href="">Resume</a></li>
+                <li><a class="l-inactive" id="l3" href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="uk-iconnav uk-navbar-transparent">
+        <li><a href="https://github.com/nealpointerexception" uk-icon="icon: github"></a></li>
+        <li><a href="" uk-icon="icon: linkedin"></a></li>
+    </ul>
+</div>
+
+<!-- Create a Granim instance -->
+<script>
+    var granimInstance = new Granim({
+        element: '#canvas-basic',
+        name: 'granim',
+        opacity: [1, 1],
+        states: {
+            "default-state": {
+                gradients: [
+                    ['#0215fd', '#ff0900'],
+                    ['#ee00ff', '#5b33f6'],
+                ]
+            }
+        }
+    });
+    // blog resume about
+    let links = [document.getElementById("l1"), document.getElementById("l2"), document.getElementById("l3")]
+    let sPath = window.location.pathname;
+    let sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+    console.log(sPage);
+    if(sPage === "about"){
+        links[2].style.color = "#ffffff"
+    }
+    else if(sPage === "blog"){
+        links[0].style.color = "#ffffff"
+    }
+</script>
+
+</section>
