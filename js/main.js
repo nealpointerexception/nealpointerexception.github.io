@@ -60,3 +60,68 @@ window.onload
         })
       });
 
+let granimInstance = new Granim({
+    element: '#canvas-basic',
+    name: 'granim',
+    opacity: [1, 1],
+    states: {
+        "default-state": {
+            gradients: [
+                ['#0215fd', '#ff0900'],
+                ['#ee00ff', '#5b33f6'],
+            ]
+        }
+    }
+});
+let href = "404"
+function go_to(){
+    window.setTimeout(function(){
+
+        // Move to a new location or you can do something else
+        window.location.href = href;
+
+    }, 2100);
+}
+function runAboutAnim(href_go){
+    href = href_go;
+    let tl = anime.timeline({
+        duration: 3000,
+    });
+    tl
+        .add({
+            targets: ['#page-title'],
+            opacity: [1, 0],
+            duration: 500
+        })
+        .add({
+            targets: '#nav',
+            height: 400,
+            duration: 1000,
+        })
+        .add({
+            targets: '#can',
+            opacity: 0,
+            duration: 2000,
+            offset: -500
+        })
+        .add({
+            targets: '#logo',
+            scale: 0.8,
+            translateY: '+=30',
+            duration: 1000,
+            offset: -100
+
+        })
+        .add({
+            targets: ['#navb', '#icons'],
+            duration: 1000,
+            offset: -100,
+            translateY: -50,
+
+        })
+        //document.getElementById('logo').style.scale = 0.8;
+
+    tl.finished.then(go_to);
+
+
+}

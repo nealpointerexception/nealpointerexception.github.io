@@ -22,52 +22,54 @@
 
 </head>
 
-<body style="background-color:#242424">
-    <canvas class="background"></canvas>
+<body>
+<section class="parent uk-animation-stroke" style="background-color:#1c1c1c" id="nav">
+    <canvas class="background child" id="can"></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-    <script src="../js/main.js"></script>
-    <div class="center-screen uk-animation-fade">
-        <div class="js-tilt" data-tilt-perspective="300" data-tilt-speed="400" data-tilt-max="35" >
-            <div class="parent" style="border-radius: 100%;">
+
+    <div class="center-screen">
+        <div class="parent">
+            <div class="parent js-tilt" id="logo">
                 <canvas id="canvas-basic"></canvas>
                 <div class="child">
-                    <img src="../imgs/neal.png" id="profile-pic" />
+                    <a href="/index.html">
+                        <img src="../imgs/neal.png" id="profile-pic" />
+                    </a>
                 </div>
 
             </div>
+<!--            <div class="child" id="about-content" style="opacity: 0">-->
+<!--                <div class="uk-card-large uk-card-secondary uk-card-body">-->
+<!--                    <h3 class="uk-card-title">Who Am I?</h3>-->
+<!--                    <p>-->
+<!--                        Ambitious, power, speed, control. Those are the words I would use to describe a car. Me? Sure, you could use those words to describe me as well.-->
+<!--                        My programming is no less than a sports car.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
-        <h1 class="uk-heading-small " style="color: white; margin-bottom: -10px;">Neal Chokshi</h1>
-        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div>
+            <h1 class="uk-heading-small" id="page-title" style="color: white; margin-bottom: -10px; margin-top: 5px;">Neal Chokshi</h1>
+        </div>
+
+
+        <nav class="uk-navbar-container uk-navbar-transparent" id="navb" uk-navbar>
             <div class="uk-navbar-left">
                 <ul class="uk-navbar-nav">
-                    <li><a class="l-inactive" href="/blog">Blog</a></li>
-                    <li><a class="l-inactive" href="">Resume</a></li>
-                    <li><a class="l-inactive" href="/about">About</a></li>
+                    <li><a class="l-inactive" id="l1" onclick="runAboutAnim('blog')">Blog</a></li>
+                    <li><a class="l-inactive" id="l2" onclick="runAboutAnim('resume')">Resume</a></li>
+                    <li><a class="l-inactive" id="l3" onclick="runAboutAnim('about')" >About</a></li>
                 </ul>
             </div>
         </nav>
-        <ul class="uk-iconnav uk-navbar-transparent">
+        <ul class="uk-iconnav uk-navbar-transparent" id="icons">
             <li><a href="https://github.com/nealpointerexception" uk-icon="icon: github"></a></li>
             <li><a href="" uk-icon="icon: linkedin"></a></li>
         </ul>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <!-- Create a Granim instance -->
-    <script>
-        var granimInstance = new Granim({
-            element: '#canvas-basic',
-            name: 'granim',
-            opacity: [1, 1],
-            states: {
-                "default-state": {
-                    gradients: [
-                        ['#0215fd', '#ff0900'],
-                        ['#ee00ff', '#5b33f6'],
-                    ]
-                }
-            }
-        });
-    </script>
+    <script src="../js/main.js"></script>
 
 </body>
 
