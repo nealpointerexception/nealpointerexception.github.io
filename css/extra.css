@@ -84,4 +84,14 @@ html, body {
     font-size: 18px;
     color: #ffffff;
 }
-
+.blog-cards{
+    width: 420px;
+    height: 290px;
+    margin: 10px;
+    border-style: solid;
+    border-width: thin;
+    /*transition: transform 1s;*/
+}
+/*.blog-cards:hover{*/
+/*    transform: scale(1.1);*/
+/*}*/

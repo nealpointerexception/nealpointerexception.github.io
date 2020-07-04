@@ -96,25 +96,25 @@ function runAboutAnim(href_go){
         .add({
             targets: '#nav',
             height: 400,
-            duration: 1000,
+            duration: 900,
         })
         .add({
             targets: '#can',
             opacity: 0,
-            duration: 2000,
-            offset: -500
+            duration: 1900,
+            offset: -400
         })
         .add({
             targets: '#logo',
             scale: 0.8,
             translateY: '+=30',
-            duration: 1000,
+            duration: 900,
             offset: -100
 
         })
         .add({
             targets: ['#navb', '#icons'],
-            duration: 1000,
+            duration: 900,
             offset: -100,
             translateY: -50,
 

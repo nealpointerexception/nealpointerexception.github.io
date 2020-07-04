@@ -1,12 +1,47 @@
 ---
 layout: default
 ---
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-</head>
-<body>
-<h1>test</h1>
-</body>
-</html>
+
+
+{% if site.paginate %}
+{% assign posts = paginator.posts %}
+{% else %}
+{% assign posts = site.posts %}
+{% endif %}
+
+
+{%- if posts.size > 0 -%}
+<div class="uk-flex uk-flex-center uk-flex-wrap uk-flex-wrap-around uk-animation-fade" style="margin:10px;">
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    {%- for post in posts -%}
+    <div class="blog-cards uk-card-default uk-card uk-card-hover">
+        <!--            <span class="post-meta">{{ post.date | date: date_format }}</span>-->
+
+        <div class="uk-card-media-top uk-cover-container" style="margin-bottom: -20px">
+
+            <img  src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}" uk-cover>
+            <canvas height="150"></canvas>
+        </div>
+        <div>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title" style="margin-bottom: -10px">
+                <a href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                </a>
+            </h3>
+            <p> {{ post.excerpt }}</p>
+            {%- for cat in post.categories -%}
+            <div class="uk-label" style="margin-right: 5px">
+                <div>
+                    {{ cat }}
+                </div>
+            </div>
+            {%- endfor -%}
+        </div>
+        </div>
+    </div>
+    {%- endfor -%}
+</div>
+
+{%- endif -%}
+
