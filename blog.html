@@ -11,7 +11,7 @@ layout: default
 
 
 {%- if posts.size > 0 -%}
-<div class="uk-flex uk-flex-center uk-flex-wrap uk-flex-wrap-around uk-animation-fade" style="margin:10px;">
+<div class="uk-flex uk-flex-center uk-flex-wrap uk-flex-wrap-around uk-animation-fade" style="margin:5px;">
     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
     {%- for post in posts -%}
     <div class="blog-cards uk-card-default uk-card uk-card-hover">
@@ -29,14 +29,18 @@ layout: default
                     {{ post.title | escape }}
                 </a>
             </h3>
-            <p> {{ post.excerpt }}</p>
+            <p style="margin-bottom: -10px"> {{ post.excerpt }}</p>
+            <p >{{ post.date | date_to_string }}</p>
+
+            <div class="uk-grid-row-small uk-card-badge" uk-grid>
             {%- for cat in post.categories -%}
-            <div class="uk-label" style="margin-right: 5px">
+            <div class="uk-label" style="margin-left: 5px; background-color: #af1ccd">
                 <div>
                     {{ cat }}
                 </div>
             </div>
             {%- endfor -%}
+            </div>
         </div>
         </div>
     </div>
