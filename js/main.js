@@ -84,6 +84,16 @@ function go_to(){
 }
 function runAboutAnim(href_go){
     href = href_go;
+
+    let mq = window.matchMedia( "(max-width: 479px)" );
+    let bar_h = 400, logo_scale = 0.8, trY = -50;
+    if (mq.matches) {
+        // window width is at less than 570px
+        bar_h = 300;
+        logo_scale = 0.6;
+        trY = -70;
+    }
+
     let tl = anime.timeline({
         duration: 3000,
     });
@@ -95,7 +105,7 @@ function runAboutAnim(href_go){
         })
         .add({
             targets: '#nav',
-            height: 400,
+            height: bar_h,
             duration: 900,
         })
         .add({
@@ -105,8 +115,8 @@ function runAboutAnim(href_go){
             offset: -400
         })
         .add({
-            targets: '#logo',
-            scale: 0.8,
+            targets: '#face',
+            scale: logo_scale,
             translateY: '+=30',
             duration: 900,
             offset: -100
@@ -116,7 +126,7 @@ function runAboutAnim(href_go){
             targets: ['#navb', '#icons'],
             duration: 900,
             offset: -100,
-            translateY: -50,
+            translateY: trY,
 
         })
         //document.getElementById('logo').style.scale = 0.8;

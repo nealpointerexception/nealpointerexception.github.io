@@ -25,9 +25,20 @@
 
 
 }
-#nav-bar{
-    background-color: #242424;
-    height: 150% !important;
+.header-bar{
+    background-color: #1c1c1c;
+    height: 400px;
+}
+.logo{
+    zoom: 0.8;
+}
+@media (max-width: 479px) {
+    .header-bar {
+        height: 300px;
+    }
+    .logo{
+        zoom: 0.6;
+    }
 }
 
 .child {
